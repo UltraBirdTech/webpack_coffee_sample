@@ -4,12 +4,16 @@ path    = require 'path'
 current = process.cwd()
 
 module.exports = {
+    entry:
+      sample: './assets/coffee/sample.coffee'
+      'common/sample': './assets/coffee/common/sample.coffee'
+ 
     output: 
-      filename: 'app.js'
+      filename: '[name].js'
 
     resolve: {
-      extenions: ['', '.js', '.coffee'] 
-      root: path.join(current, './assets/coffee')
+      modules: [path.join(current, './assets/coffee'), 'node_modules']
+      extensions: ['.js', '.coffee'] 
     }
 
     module:  
