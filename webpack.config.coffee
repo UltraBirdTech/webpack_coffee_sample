@@ -9,7 +9,7 @@ module.exports = {
       'common/sample': './assets/coffee/common/sample.coffee'
  
     output: 
-      filename: '[name].js'
+      filename: './public/js/[name].js'
 
     resolve: {
       modules: [path.join(current, './assets/coffee'), 'node_modules']
